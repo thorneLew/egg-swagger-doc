@@ -14,10 +14,14 @@
 [https://github.com/taccisum/swagger-doc-snippets/releases](https://github.com/taccisum/swagger-doc-snippets/releases)
 手动安装。
 ## 优化位置
-1.  lib/document/index.js  134
+1.  lib/document/index.js 133行
 ```js
 // 
-path_method.operationId = `${direct.replace(path.sep, '_').replace('/', '_')}_${func[i - 1]}`;
+function firstUpperCase(str) {
+  return str.toLowerCase().replace(/( |^)[a-z]/g, (L) => L.toUpperCase());
+}
+let operationId = routers[0][2].split('/').map(item => firstUpperCase(item)).join('')
+
 ```
 ## Install
 
