@@ -13,11 +13,16 @@
 因目前还没有发布到插件市场，可以通过
 [https://github.com/taccisum/swagger-doc-snippets/releases](https://github.com/taccisum/swagger-doc-snippets/releases)
 手动安装。
-
+## 优化位置
+1.  lib/document/index.js  134
+```js
+// 
+path_method.operationId = `${direct.replace(path.sep, '_').replace('/', '_')}_${func[i - 1]}`;
+```
 ## Install
 
 ```bash
-$ npm i egg-swagger-doc --save
+$ npm i egg-swagger-docs --save
 ```
 
 ## Usage
@@ -26,7 +31,7 @@ $ npm i egg-swagger-doc --save
 // {app_root}/config/plugin.js
 exports.swaggerdoc = {
   enable: true,
-  package: 'egg-swagger-doc',
+  package: 'egg-swagger-docs',
 };
 ```
 

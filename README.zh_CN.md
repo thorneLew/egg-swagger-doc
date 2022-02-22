@@ -47,7 +47,7 @@ egg-swagger-doc 版本 | egg 1.x
 // config/plugin.js
 exports.swaggerdoc = {
   enable: true,
-  package: 'egg-swagger-doc',
+  package: 'egg-swagger-docs',
 };
 ```
 
